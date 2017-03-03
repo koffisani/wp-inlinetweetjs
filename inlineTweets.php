@@ -88,7 +88,7 @@ if (!function_exists("inline_tweet_link")) {
 		), $atts));
 		
 		wp_enqueue_style( 'inlineTweets', plugins_url('assets/inline-tweet.min.css',__FILE__ ));
-		wp_enqueue_script( 'inlineTweets', plugins_url('assets/inline-tweet.min.js',__FILE__ ),array(jquery));
+		wp_enqueue_script( 'inlineTweets', plugins_url('assets/inline-tweet.min.js',__FILE__ ));
 		
 		global $wp;
 		//$current_url = home_url(add_query_arg(array(),$wp->request));
@@ -134,6 +134,10 @@ if (!function_exists("inline_tweet_link")) {
 		} else {
 			$wrapper = "span";
 		}
+		
+		$setVia = '';
+		$setTag = '';
+		$setUrl = '';
 		
 		if ( $via != "") {
 			$setVia = ' data-inline-tweet-via="'. $via .'"';
