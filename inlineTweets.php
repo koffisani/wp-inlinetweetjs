@@ -136,7 +136,7 @@ if (!function_exists("inline_tweet_link")) {
 		}
 		
 		$setVia = '';
-		$setTag = '';
+		$setTags = '';
 		$setUrl = '';
 		
 		if ( $via != "") {
